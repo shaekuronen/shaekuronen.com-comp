@@ -1,0 +1,17 @@
+{
+
+  "home": {
+    "layout": "home"
+  },
+
+  "flexbox": {
+    "category": "lab",
+    "layout": "experiment"
+  },
+
+  "coca_cola_journey": {
+    "category": "project",
+    "layout": "project"
+  }
+
+}
