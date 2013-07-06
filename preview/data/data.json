@@ -1,0 +1,54 @@
+{
+
+  "global": {
+    "site_name": "Shae Kuronen",
+    "google_analytics": "XOXOXO"
+  },
+
+  "home": {
+    "layout": "dev/layouts/home.ejs",
+    "meta": {
+      "title": "Home",
+      "description": "Portfolio Site | Shae Kuronen",
+      "keywords": "",
+      "facebook": {
+        "og_title": "Shae Kuronen",
+        "og_type": "website",
+        "og_url": "http://shaekuronen.com",
+        "og_image": "",
+        "og_site_name": "Shae Kuronen",
+        "og_app_id": "",
+        "og_description": "Portfolio Site | Shae Kuronen"
+      }
+    }
+  },
+
+  "work": {
+    "layout": "dev/layouts/work.ejs",
+    "meta": {
+      "title": "Work",
+      "description": "Portfolio Site | Shae Kuronen",
+      "keywords": "",
+      "facebook": {
+        "og_title": "Shae Kuronen",
+        "og_type": "website",
+        "og_url": "http://shaekuronen.com",
+        "og_image": "",
+        "og_site_name": "Shae Kuronen",
+        "og_app_id": "",
+        "og_description": "Portfolio Site | Shae Kuronen"
+      }
+    }
+  },
+
+  "flexbox": {
+    "category": "lab",
+    "layout": "dev/layouts/experiment.ejs"
+  },
+
+  "coca_cola_journey": {
+    "category": "project",
+    "layout": "dev/layouts/project.ejs"
+  }
+
+}

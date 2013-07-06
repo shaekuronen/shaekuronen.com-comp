@@ -77,13 +77,7 @@ module.exports = function(grunt) {
           src: 'dev',
           dest: 'preview',
           index_page: 'home',
-          data: {
-            global: 'dev/data/global.json',
-            meta: 'dev/data/meta.json',
-            routes: 'dev/data/routes.json',
-            projects: 'dev/data/projects.json',
-            experiments: 'dev/data/experiments.json'
-          }
+          data: 'dev/data/data.json',
         }
       },
       optimize: {
@@ -94,7 +88,7 @@ module.exports = function(grunt) {
           data: {
             global: 'dev/data/global.json',
             meta: 'dev/data/meta.json',
-            routes: 'dev/data/routes.json',
+            files: 'dev/data/files.json',
             projects: 'dev/data/projects.json',
             experiments: 'dev/data/experiments.json'
           }
@@ -134,6 +128,7 @@ module.exports = function(grunt) {
           ,{expand: true, cwd: 'dev/', src: ['css/**'], dest: 'preview/'}
           ,{expand: true, cwd: 'dev/', src: ['js/**'], dest: 'preview/'}
           ,{expand: true, cwd: 'dev/', src: ['data/**'], dest: 'preview/'}
+          ,{expand: true, cwd: 'dev/', src: ['templates/**'], dest: 'preview/'}
           ,{expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'preview/'}
         ]
       }
@@ -305,7 +300,7 @@ module.exports = function(grunt) {
   // END DEPLOYMENT
 
   // TEST
-  grunt.registerTask('test', ['ejs_static:preview' ]);
+  grunt.registerTask('test', [ 'clean:preview', 'copy:preview', 'ejs_static:preview' ]);
   // END TEST
 
   grunt.task.registerMultiTask('log', 'Log stuff.', function() {
