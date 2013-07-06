@@ -19,10 +19,6 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json')
 
-    ,log: {
-      data: data.global.google_analytics
-    }
-
     ,livereload: {
       port: 35729 
     }
@@ -95,7 +91,13 @@ module.exports = function(grunt) {
           src: 'dev',
           dest: 'production',
           index_page: 'home',
-          data: data
+          data: {
+            global: 'dev/data/global.json',
+            meta: 'dev/data/meta.json',
+            routes: 'dev/data/routes.json',
+            projects: 'dev/data/projects.json',
+            experiments: 'dev/data/experiments.json'
+          }
         }
       }
     }
