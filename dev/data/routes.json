@@ -1,17 +1,21 @@
 {
 
   "home": {
-    "layout": "home"
+    "layout": "dev/layouts/home.ejs"
+  },
+
+  "work": {
+    "layout": "dev/layouts/work.ejs"
   },
 
   "flexbox": {
     "category": "lab",
-    "layout": "experiment"
+    "layout": "dev/layouts/experiment.ejs"
   },
 
   "coca_cola_journey": {
     "category": "project",
-    "layout": "project"
+    "layout": "dev/layouts/project.ejs"
   }
 
 }
