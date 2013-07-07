@@ -76,7 +76,7 @@ module.exports = function(grunt) {
         options: {
           dest: 'preview',
           index_page: 'home',
-          // parent_dir: false,
+          parent_dir: true,
           underscores_to_dashes: true,
           file_extension: '.html',
           data: 'dev/data/data.json',
