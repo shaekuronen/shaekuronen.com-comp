@@ -74,24 +74,18 @@ module.exports = function(grunt) {
     ,ejs_static: {
       preview: {
         options: {
-          src: 'dev',
           dest: 'preview',
           index_page: 'home',
+          parent_dir: true,
           data: 'dev/data/data.json',
         }
       },
       optimize: {
         options: {
-          src: 'dev',
           dest: 'production',
           index_page: 'home',
-          data: {
-            global: 'dev/data/global.json',
-            meta: 'dev/data/meta.json',
-            files: 'dev/data/files.json',
-            projects: 'dev/data/projects.json',
-            experiments: 'dev/data/experiments.json'
-          }
+          parent_dir: true,
+          data: 'dev/data/data.json',
         }
       }
     }
