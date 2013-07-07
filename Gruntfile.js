@@ -121,8 +121,6 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'dev/', src: ['img/**'], dest: 'preview/'}
           ,{expand: true, cwd: 'dev/', src: ['css/**'], dest: 'preview/'}
           ,{expand: true, cwd: 'dev/', src: ['js/**'], dest: 'preview/'}
-          ,{expand: true, cwd: 'dev/', src: ['data/**'], dest: 'preview/'}
-          ,{expand: true, cwd: 'dev/', src: ['templates/**'], dest: 'preview/'}
           ,{expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'preview/'}
         ]
       }
