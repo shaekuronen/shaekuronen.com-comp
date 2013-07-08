@@ -123,6 +123,7 @@ module.exports = function(grunt) {
         files: [
           {expand: true, flatten: true, cwd: 'dev/', src: ['templates/global/head.ejs'], dest: 'production/', filter: 'isFile'}
           ,{expand: true, flatten: true, cwd: 'dev/', src: ['templates/global/scripts.ejs'], dest: 'production/', filter: 'isFile'}
+          ,{expand: true, cwd: 'dev/', src: ['templates/**'], dest: 'production/'}
           ,{expand: true, cwd: 'dev/', src: ['js/**'], dest: 'production/'}
           ,{expand: true, cwd: 'dev/', src: ['css/**'], dest: 'production/'}
           ,{expand: true, cwd: 'dev/', src: ['img/**'], dest: 'production/'}
@@ -245,7 +246,7 @@ module.exports = function(grunt) {
     'usemin', 
     'ejs_static:optimize', 
     'imagemin', 
-    'clean:post_optimize', 
+    // 'clean:post_optimize', 
     'connect:optimize'
   ]);
   // end optimize the site for deployment
