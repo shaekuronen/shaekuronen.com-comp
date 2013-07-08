@@ -46,24 +46,15 @@ module.exports = function(grunt) {
 
     // delete everything from preview or production directories before optimize task
     ,clean: {
-      optimize: {
-        src: 'production/'
-      }
-      ,preview: {
+      preview: {
         src: 'preview/'
       }
-      ,preview_css: {
-        src: 'preview/css/'
-      }
-      ,preview_js: {
-        src: 'preview/js/'
-      }
-      ,preview_img: {
-        src: 'preview/img/'
+      ,optimize: {
+        src: 'production/'
       }
       ,post_optimize: {
         src: [
-          'production/pages/', 
+          'production/layouts/', 
           'production/templates/',
           'production/scripts.ejs',
           'production/head.ejs'
@@ -76,7 +67,7 @@ module.exports = function(grunt) {
         options: {
           dest: 'preview',
           index_page: 'home',
-          parent_dir: true,
+          parent_dirs: true,
           underscores_to_dashes: true,
           file_extension: '.html',
           data: 'dev/data/data.json',
@@ -86,7 +77,9 @@ module.exports = function(grunt) {
         options: {
           dest: 'production',
           index_page: 'home',
-          parent_dir: true,
+          parent_dirs: true,
+          underscores_to_dashes: true,
+          file_extension: '.html',
           data: 'dev/data/data.json',
         }
       }
@@ -126,31 +119,13 @@ module.exports = function(grunt) {
           ,{expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'preview/'}
         ]
       }
-      ,img: {
-        files: [
-          {expand: true, cwd: 'dev/', src: ['img/**'], dest: 'preview/'}
-        ]
-      }
-      ,css: {
-        files: [
-          {expand: true, cwd: 'dev/', src: ['css/**'], dest: 'preview/'}
-        ]
-      }
-      ,js: {
-        files: [
-          {expand: true, cwd: 'dev/', src: ['js/**'], dest: 'preview/'}
-        ]
-      }
       ,optimize: {
         files: [
           {expand: true, flatten: true, cwd: 'dev/', src: ['templates/global/head.ejs'], dest: 'production/', filter: 'isFile'}
           ,{expand: true, flatten: true, cwd: 'dev/', src: ['templates/global/scripts.ejs'], dest: 'production/', filter: 'isFile'}
-          ,{expand: true, cwd: 'dev/', src: ['pages/**'], dest: 'production/'}
-          ,{expand: true, cwd: 'dev/', src: ['templates/**'], dest: 'production/'}
           ,{expand: true, cwd: 'dev/', src: ['js/**'], dest: 'production/'}
           ,{expand: true, cwd: 'dev/', src: ['css/**'], dest: 'production/'}
           ,{expand: true, cwd: 'dev/', src: ['img/**'], dest: 'production/'}
-          ,{expand: true, cwd: 'dev/', src: ['data/**'], dest: 'production/'}
           ,{expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'production/'}
           ,{expand: true, cwd: 'dev/', src: ['robots.txt'], dest: 'production/'}
           ,{expand: true, cwd: 'dev/', src: ['js/vendor/modernizr.custom.js'], dest: 'production/'}
@@ -171,17 +146,10 @@ module.exports = function(grunt) {
     }   
 
     ,regarde: {
-      pages: {
+      layouts: {
         files: [
-          'dev/pages/*.ejs'
-          ,'dev/pages/**/*.ejs'
-        ]
-        ,tasks: ['template', 'livereload']
-      }
-      ,inc: {
-        files: [
-          'dev/inc/*.ejs'
-          ,'dev/inc/**/*.ejs'
+          'dev/layouts/*.ejs'
+          ,'dev/layouts/**/*.ejs'
         ]
         ,tasks: ['template', 'livereload']
       }
@@ -254,7 +222,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-ejs-static');
 
-  // DEVELOPMENT
   // preview the site during development
   grunt.registerTask('preview', [
     'clean:preview', 
@@ -264,18 +231,8 @@ module.exports = function(grunt) {
     'exec:start_server', 
     'regarde'
   ]);
+  // end preview the site during development
 
-  // refresh the preview css
-  grunt.registerTask('refresh_css', ['clean:preview_css', 'copy:css' ]);
-
-  // refresh the preview js
-  grunt.registerTask('refresh_js', ['clean:preview_js', 'copy:js' ]);
-
-  // refresh the preview img
-  grunt.registerTask('refresh_img', ['clean:preview_img', 'copy:img' ]);
-  // END DEVELOPEMENT
-
-  // DEPLOYMENT
   // optimize the site for deployment
   grunt.registerTask('optimize', [
     'clean:optimize', 
@@ -291,14 +248,10 @@ module.exports = function(grunt) {
     'clean:post_optimize', 
     'connect:optimize'
   ]);
-  // END DEPLOYMENT
+  // end optimize the site for deployment
 
   // TEST
   grunt.registerTask('test', [ 'clean:preview', 'copy:preview', 'ejs_static:preview' ]);
   // END TEST
-
-  grunt.task.registerMultiTask('log', 'Log stuff.', function() {
-  grunt.log.writeln(this.target + ': ' + this.data);
-});
 
 };
