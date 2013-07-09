@@ -70,7 +70,7 @@ module.exports = function(grunt) {
           parent_dirs: true,
           underscores_to_dashes: true,
           file_extension: '.html',
-          data: 'dev/data/data.json',
+          path_to_data: 'dev/data/data.json',
         }
       },
       optimize: {
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
           parent_dirs: true,
           underscores_to_dashes: true,
           file_extension: '.html',
-          data: 'dev/data/data.json',
+          path_to_data: 'dev/data/data.json',
         }
       }
     }
