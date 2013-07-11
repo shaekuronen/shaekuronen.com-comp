@@ -113,24 +113,27 @@ module.exports = function(grunt) {
     ,copy: {
       preview: {
         files: [
-          {expand: true, cwd: 'dev/', src: ['img/**'], dest: 'preview/'}
-          ,{expand: true, cwd: 'dev/', src: ['css/**'], dest: 'preview/'}
-          ,{expand: true, cwd: 'dev/', src: ['js/**'], dest: 'preview/'}
-          ,{expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'preview/'}
+          // {expand: true, cwd: 'dev/', src: ['img/**'], dest: 'preview/'}
+          // ,{expand: true, cwd: 'dev/', src: ['css/**'], dest: 'preview/'}
+          // ,{expand: true, cwd: 'dev/', src: ['js/**'], dest: 'preview/'}
+          // ,{expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'preview/'}
+          {expand: true, cwd: 'dev/', src: ['**/*'], dest: 'preview/'}
         ]
       }
       ,optimize: {
         files: [
           {expand: true, flatten: true, cwd: 'dev/', src: ['templates/global/head.ejs'], dest: 'production/', filter: 'isFile'}
           ,{expand: true, flatten: true, cwd: 'dev/', src: ['templates/global/scripts.ejs'], dest: 'production/', filter: 'isFile'}
-          ,{expand: true, cwd: 'dev/', src: ['templates/**'], dest: 'production/'}
-          ,{expand: true, cwd: 'dev/', src: ['js/**'], dest: 'production/'}
-          ,{expand: true, cwd: 'dev/', src: ['css/**'], dest: 'production/'}
-          ,{expand: true, cwd: 'dev/', src: ['img/**'], dest: 'production/'}
-          ,{expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'production/'}
-          ,{expand: true, cwd: 'dev/', src: ['robots.txt'], dest: 'production/'}
-          ,{expand: true, cwd: 'dev/', src: ['js/vendor/modernizr.custom.js'], dest: 'production/'}
           ,{expand: true, flatten: true, cwd: 'dev/', src: ['css/fonts/**'], dest: 'production/fonts/', filter: 'isFile'}
+          // ,{expand: true, cwd: 'dev/', src: ['templates/**'], dest: 'production/'}
+          // ,{expand: true, cwd: 'dev/', src: ['js/**'], dest: 'production/'}
+          // ,{expand: true, cwd: 'dev/', src: ['css/**'], dest: 'production/'}
+          // ,{expand: true, cwd: 'dev/', src: ['img/**'], dest: 'production/'}
+          // ,{expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'production/'}
+          // ,{expand: true, cwd: 'dev/', src: ['robots.txt'], dest: 'production/'}
+          // ,{expand: true, cwd: 'dev/', src: ['js/vendor/modernizr.custom.js'], dest: 'production/'}
+          ,{expand: true, cwd: 'dev/', src: ['**/*'], dest: 'production/'}
+          
         ]
       }
     }
@@ -246,7 +249,7 @@ module.exports = function(grunt) {
     'usemin', 
     'ejs_static:optimize', 
     'imagemin', 
-    // 'clean:post_optimize', 
+    'clean:post_optimize', 
     'connect:optimize'
   ]);
   // end optimize the site for deployment
