@@ -66,6 +66,7 @@ module.exports = function(grunt) {
       preview: {
         options: {
           dest: 'preview',
+          path_to_layouts: 'dev/pages',
           index_page: 'home',
           parent_dirs: true,
           underscores_to_dashes: true,
@@ -76,6 +77,7 @@ module.exports = function(grunt) {
       optimize: {
         options: {
           dest: 'production',
+          path_to_layouts: 'dev/layouts',
           index_page: 'home',
           parent_dirs: true,
           underscores_to_dashes: true,
