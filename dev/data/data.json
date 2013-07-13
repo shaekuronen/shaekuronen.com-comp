@@ -23,7 +23,7 @@
   },
 
   "work": {
-    "path_to_layout": "layouts/work.ejs",
+    "path_to_layout": "dev/layouts/work.ejs",
     "meta": {
       "title": "Work",
       "description": "Portfolio Site | Shae Kuronen",
@@ -40,9 +40,43 @@
     }
   },
 
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Portfolio Site | Shae Kuronen",
+      "keywords": "",
+      "facebook": {
+        "og_title": "Shae Kuronen",
+        "og_type": "website",
+        "og_url": "http://shaekuronen.com",
+        "og_image": "",
+        "og_site_name": "Shae Kuronen",
+        "og_app_id": "",
+        "og_description": "Portfolio Site | Shae Kuronen"
+      }
+    }
+  },
+
+  "about": {
+    "meta": {
+      "title": "About",
+      "description": "Portfolio Site | Shae Kuronen",
+      "keywords": "",
+      "facebook": {
+        "og_title": "Shae Kuronen",
+        "og_type": "website",
+        "og_url": "http://shaekuronen.com",
+        "og_image": "",
+        "og_site_name": "Shae Kuronen",
+        "og_app_id": "",
+        "og_description": "Portfolio Site | Shae Kuronen"
+      }
+    }
+  },
+
   "flexbox": {
     "category": "lab",
-    "path_to_layout": "layouts/experiment.ejs",
+    "path_to_layout": "dev/layouts/experiment.ejs",
     "meta": {
       "title": "Flexible Box Model",
       "description": "Future Proof Flexbox",
@@ -61,7 +95,7 @@
 
   "coca_cola_journey": {
     "category": "project",
-    "path_to_layout": "layouts/project.ejs",
+    "path_to_layout": "dev/layouts/project.ejs",
     "meta": {
       "title": "Coca-Cola Journey Responsive Design",
       "description": "Some description here",

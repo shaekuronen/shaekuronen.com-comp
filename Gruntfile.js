@@ -66,12 +66,13 @@ module.exports = function(grunt) {
       preview: {
         options: {
           dest: 'preview',
+          path_to_data: 'dev/data/data.json',
           path_to_layouts: 'dev/pages',
           index_page: 'home',
           parent_dirs: true,
           underscores_to_dashes: true,
           file_extension: '.html',
-          path_to_data: 'dev/data/data.json'
+          global_data: '_global'
         }
       },
       optimize: {
