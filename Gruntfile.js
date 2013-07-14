@@ -69,21 +69,23 @@ module.exports = function(grunt) {
           path_to_data: 'dev/data/data.json',
           path_to_layouts: 'dev/pages',
           index_page: 'home',
-          parent_dirs: true,
+          parent_dirs: false,
           underscores_to_dashes: true,
           file_extension: '.html',
-          global_data: '_global'
+          global_data: '_global',
+          path_separator: '/'
         }
       },
       optimize: {
         options: {
           dest: 'production',
-          path_to_layouts: 'dev/layouts',
+          path_to_data: 'dev/data/data.json',
+          path_to_layouts: 'dev/pages',
           index_page: 'home',
-          parent_dirs: true,
+          parent_dirs: false,
           underscores_to_dashes: true,
           file_extension: '.html',
-          path_to_data: 'dev/data/data.json'
+          global_data: '_global'
         }
       }
     }
