@@ -66,7 +66,8 @@ module.exports = function(grunt) {
       preview: {
         options: {
           dest: 'preview',
-          path_to_data: 'dev/data/data.json',
+          path_to_data: 'dev/data/pages.json',
+          path_to_global_data: 'dev/data/global.json',
           path_to_layouts: 'dev/pages',
           index_page: 'home',
           parent_dirs: false,
@@ -79,7 +80,8 @@ module.exports = function(grunt) {
       optimize: {
         options: {
           dest: 'production',
-          path_to_data: 'dev/data/data.json',
+          path_to_data: 'dev/data/pages.json',
+          path_to_global_data: 'dev/data/global.json',
           path_to_layouts: 'dev/pages',
           index_page: 'home',
           parent_dirs: false,

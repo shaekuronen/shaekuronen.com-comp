@@ -1,0 +1,104 @@
+{
+
+  "Alexander Wang": {
+    "logo": "path/to/logo",
+    "site": "http://www.alexanderwang.com",
+    "project": "/project/alexander-wang-facebook-app"
+  },
+  "Neiman Marcus": {
+    "logo": "",
+    "site": "http://tumblr.neimanmarcus.com/",
+    "project": "/project/neiman-marcus-tumblr-theme"
+  },
+  "Artspace": {
+    "logo": "",
+    "site": "http://www.artspace.com/",
+    "project": ""
+  },
+  "Morpheus Media": {
+    "logo": "",
+    "site": "http://www.morpheusmedia.com",
+    "project": ""
+  },
+  "Buddy Media": {
+    "logo": "",
+    "site": "",
+    "project": "/project/buddy-media-site-refresh"
+  },
+  "Kate Spade": {
+    "logo": "",
+    "site": "",
+    "project": "/project/kate-spade-facebook-app"
+  },
+  "Jack Spade": {
+    "logo": "",
+    "site": "",
+    "project": "/project/jack-spade-facebook-app"
+  },
+  "Jonathan Adler": {
+    "logo": "",
+    "site": "http://www.jonathanadler.com/",
+    "project": ""
+  },
+  "American Manhasset": {
+    "logo": "",
+    "site": "http://blog.americanamanhasset.com/",
+    "project": "/project/americana-manhasset-tumblr-theme"
+  },
+  "Coca-Cola": {
+    "logo": "",
+    "site": "",
+    "project": "/project/coca-cola-unbottled-blog"
+  },
+  "Toyota": {
+    "logo": "",
+    "site": "http://www.toyota.com/rav4ev/tour/",
+    "project": ""
+  },
+  "Denizen": {
+    "logo": "",
+    "site": "http://www.denizen.com/",
+    "project": "/project/denizen-site-build"
+  },
+  "DoubleDown Interactive": {
+    "logo": "",
+    "site": "http://doubledowninteractive.com/",
+    "project": "/project/doubledown-interactive-site-build"
+  },
+  "Dockers": {
+    "logo": "",
+    "site": "",
+    "project": "/project/dockers-promo-site"
+  },
+  "Microsoft": {
+    "logo": "",
+    "site": "http://office.microsoft.com/en-us/",
+    "project": ""
+  },
+  "Levis": {
+    "logo": "",
+    "site": "http://signaturelookbook.com",
+    "project": ""
+  },
+  "Covergirl": {
+    "logo": "",
+    "site": "",
+    "project": "/project/denizen-covergirl-promo-site"
+  },
+  "Bullett Media": {
+    "logo": "",
+    "site": "http://bullettmedia.com/",
+    "project": ""
+  },
+  "": {
+    "logo": "",
+    "site": "",
+    "project": ""
+  },
+  "": {
+    "logo": "",
+    "site": "",
+    "project": ""
+  }
+  
+}
