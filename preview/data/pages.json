@@ -37,9 +37,7 @@
 
   "clients": {
     "path_to_layout": "dev/layouts/clients.ejs",
-    "path_to_data": [
-      "dev/data/clients.json"
-    ],
+    "path_to_data": "dev/data/clients.json",
     "meta": {
       "title": "Clients",
       "description": "Portfolio Site | Shae Kuronen",
