@@ -1,7 +1,29 @@
 
+<!-- clients -->
+<div>
+<% Object.keys(clients).forEach(function(key) { %>
 
-    <!-- clients -->
-    <% for(var i=0; i < clients.length; i++) { %>
-      <p><%= clients[i].site %></p>
-    <% } %>
-    <!-- end clients -->
+  <h3><%= key %></h3>
+
+  <% if (clients[key].project_link !== "") { %>
+  <p><%= clients[key].project_link %></p>
+  <% } else { %>
+  <p><%= clients[key].site %></p>
+  <% } %>
+
+<% }); %>
+</div>
+
+<div>
+  <%= clients["Alexander Wang"].site %>
+</div>
+
+<div>
+  <%=: clients | get:'Dockers' | get:'project_link' %>
+</div>
+
+<div>
+<%=: clients | each:'project_link' %>
+</div>
+
+<!-- end clients -->

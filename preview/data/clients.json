@@ -3,102 +3,92 @@
   "Alexander Wang": {
     "logo": "path/to/logo",
     "site": "http://www.alexanderwang.com",
-    "project": "/project/alexander-wang-facebook-app"
+    "project_link": "/project/alexander-wang-facebook-app"
   },
   "Neiman Marcus": {
     "logo": "",
     "site": "http://tumblr.neimanmarcus.com/",
-    "project": "/project/neiman-marcus-tumblr-theme"
+    "project_link": "/project/neiman-marcus-tumblr-theme"
   },
   "Artspace": {
     "logo": "",
     "site": "http://www.artspace.com/",
-    "project": ""
+    "project_link": ""
   },
   "Morpheus Media": {
     "logo": "",
     "site": "http://www.morpheusmedia.com",
-    "project": ""
+    "project_link": ""
   },
   "Buddy Media": {
     "logo": "",
     "site": "",
-    "project": "/project/buddy-media-site-refresh"
+    "project_link": "/project/buddy-media-site-refresh"
   },
   "Kate Spade": {
     "logo": "",
     "site": "",
-    "project": "/project/kate-spade-facebook-app"
+    "project_link": "/project/kate-spade-facebook-app"
   },
   "Jack Spade": {
     "logo": "",
     "site": "",
-    "project": "/project/jack-spade-facebook-app"
+    "project_link": "/project/jack-spade-facebook-app"
   },
   "Jonathan Adler": {
     "logo": "",
     "site": "http://www.jonathanadler.com/",
-    "project": ""
+    "project_link": ""
   },
   "American Manhasset": {
     "logo": "",
     "site": "http://blog.americanamanhasset.com/",
-    "project": "/project/americana-manhasset-tumblr-theme"
+    "project_link": "/project/americana-manhasset-tumblr-theme"
   },
   "Coca-Cola": {
     "logo": "",
     "site": "",
-    "project": "/project/coca-cola-unbottled-blog"
+    "project_link": "/project/coca-cola-unbottled-blog"
   },
   "Toyota": {
     "logo": "",
     "site": "http://www.toyota.com/rav4ev/tour/",
-    "project": ""
+    "project_link": ""
   },
   "Denizen": {
     "logo": "",
     "site": "http://www.denizen.com/",
-    "project": "/project/denizen-site-build"
+    "project_link": "/project/denizen-site-build"
   },
   "DoubleDown Interactive": {
     "logo": "",
     "site": "http://doubledowninteractive.com/",
-    "project": "/project/doubledown-interactive-site-build"
+    "project_link": "/project/doubledown-interactive-site-build"
   },
   "Dockers": {
     "logo": "",
     "site": "",
-    "project": "/project/dockers-promo-site"
+    "project_link": "/project/dockers-promo-site"
   },
   "Microsoft": {
     "logo": "",
     "site": "http://office.microsoft.com/en-us/",
-    "project": ""
+    "project_link": ""
   },
   "Levis": {
     "logo": "",
     "site": "http://signaturelookbook.com",
-    "project": ""
+    "project_link": ""
   },
   "Covergirl": {
     "logo": "",
     "site": "",
-    "project": "/project/denizen-covergirl-promo-site"
+    "project_link": "/project/denizen-covergirl-promo-site"
   },
   "Bullett Media": {
     "logo": "",
     "site": "http://bullettmedia.com/",
-    "project": ""
-  },
-  "": {
-    "logo": "",
-    "site": "",
-    "project": ""
-  },
-  "": {
-    "logo": "",
-    "site": "",
-    "project": ""
+    "project_link": ""
   }
-  
+
 }

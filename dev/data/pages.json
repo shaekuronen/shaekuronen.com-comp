@@ -19,6 +19,10 @@
 
   "work": {
     "path_to_layout": "dev/layouts/work.ejs",
+    "path_to_data": [
+      "dev/data/clients.json",
+
+    ]
     "meta": {
       "title": "Work",
       "description": "Portfolio Site | Shae Kuronen",
