@@ -43,6 +43,66 @@
       "og_app_id": "",
       "og_description": "Portfolio Site | Shae Kuronen"
     }
+  },
+
+  "about": {
+    "title": "About",
+    "description": "Portfolio Site | Shae Kuronen",
+    "keywords": "",
+    "facebook": {
+      "og_title": "Shae Kuronen",
+      "og_type": "website",
+      "og_url": "http://shaekuronen.com",
+      "og_image": "",
+      "og_site_name": "Shae Kuronen",
+      "og_app_id": "",
+      "og_description": "Portfolio Site | Shae Kuronen"
+    }
+  },
+
+  "clients": {
+    "title": "Clients",
+    "description": "Portfolio Site | Shae Kuronen",
+    "keywords": "",
+    "facebook": {
+      "og_title": "Shae Kuronen",
+      "og_type": "website",
+      "og_url": "http://shaekuronen.com",
+      "og_image": "",
+      "og_site_name": "Shae Kuronen",
+      "og_app_id": "",
+      "og_description": "Portfolio Site | Shae Kuronen"
+    }
+  },
+
+  "flexbox": {
+    "title": "Flexible Box Model",
+    "description": "Future Proof Flexbox",
+    "keywords": "",
+    "facebook": {
+      "og_title": "Shae Kuronen",
+      "og_type": "website",
+      "og_url": "http://shaekuronen.com",
+      "og_image": "",
+      "og_site_name": "Shae Kuronen",
+      "og_app_id": "",
+      "og_description": "Portfolio Site | Shae Kuronen"
+    }
+  },
+
+  "coca_cola_journey": {
+    "title": "Coca-Cola Journey HTML Email",
+    "description": "Some description here",
+    "keywords": "",
+    "facebook": {
+      "og_title": "Shae Kuronen",
+      "og_type": "website",
+      "og_url": "http://shaekuronen.com",
+      "og_image": "",
+      "og_site_name": "Shae Kuronen",
+      "og_app_id": "",
+      "og_description": "Portfolio Site | Shae Kuronen"
+    }
   }
 
 }

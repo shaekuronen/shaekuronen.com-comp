@@ -67,13 +67,11 @@ module.exports = function(grunt) {
         options: {
           dest: 'preview',
           path_to_data: 'dev/data/pages.json',
-          path_to_global_data: 'dev/data/global.json',
           path_to_layouts: 'dev/pages',
           index_page: 'home',
           parent_dirs: false,
           underscores_to_dashes: true,
           file_extension: '.html',
-          global_data: '_global',
           path_separator: '/'
         }
       },

@@ -1,136 +1,64 @@
 {
 
   "home": {
-    "path_to_data": {
-      "dev/data/clients.json": "Dockers"
-    },
-    "meta": {
-      "title": "Home",
-      "description": "Portfolio Site | Shae Kuronen",
-      "keywords": "",
-      "facebook": {
-        "og_title": "Shae Kuronen",
-        "og_type": "website",
-        "og_url": "http://shaekuronen.com",
-        "og_image": "",
-        "og_site_name": "Shae Kuronen",
-        "og_app_id": "",
-        "og_description": "Portfolio Site | Shae Kuronen"
-      }
-    }
+    "path_to_layout": "dev/layouts/home.ejs",
+    "path_to_data": [
+      "dev/data/global.json",
+      "dev/data/clients.json",
+      "dev/data/projects.json",
+      {"dev/data/meta.json": "home"}
+    ]
   },
 
   "work": {
     "path_to_layout": "dev/layouts/work.ejs",
     "path_to_data": [
       "dev/data/clients.json",
-      "dev/data/projects.json"
-    ],
-    "meta": {
-      "title": "Work",
-      "description": "Portfolio Site | Shae Kuronen",
-      "keywords": "",
-      "facebook": {
-        "og_title": "Shae Kuronen",
-        "og_type": "website",
-        "og_url": "http://shaekuronen.com",
-        "og_image": "",
-        "og_site_name": "Shae Kuronen",
-        "og_app_id": "",
-        "og_description": "Portfolio Site | Shae Kuronen"
-      }
-    }
+      "dev/data/projects.json",
+      {"dev/data/meta.json": "work"}
+    ]
   },
 
   "clients": {
     "path_to_layout": "dev/layouts/clients.ejs",
-    "path_to_data": "dev/data/clients.json",
-    "meta": {
-      "title": "Clients",
-      "description": "Portfolio Site | Shae Kuronen",
-      "keywords": "",
-      "facebook": {
-        "og_title": "Shae Kuronen",
-        "og_type": "website",
-        "og_url": "http://shaekuronen.com",
-        "og_image": "",
-        "og_site_name": "Shae Kuronen",
-        "og_app_id": "",
-        "og_description": "Portfolio Site | Shae Kuronen"
-      }
-    }
+    "path_to_data": [
+      "dev/data/global.json",
+      "dev/data/clients.json",
+      {"dev/data/meta.json": "clients"}
+    ]
   },
 
   "contact": {
-    "meta": {
-      "title": "Contact",
-      "description": "Portfolio Site | Shae Kuronen",
-      "keywords": "",
-      "facebook": {
-        "og_title": "Shae Kuronen",
-        "og_type": "website",
-        "og_url": "http://shaekuronen.com",
-        "og_image": "",
-        "og_site_name": "Shae Kuronen",
-        "og_app_id": "",
-        "og_description": "Portfolio Site | Shae Kuronen"
-      }
-    }
+    "path_to_data": [
+      "dev/data/global.json",
+      {"dev/data/meta.json": "default"}
+    ]
   },
 
   "about": {
-    "meta": {
-      "title": "About",
-      "description": "Portfolio Site | Shae Kuronen",
-      "keywords": "",
-      "facebook": {
-        "og_title": "Shae Kuronen",
-        "og_type": "website",
-        "og_url": "http://shaekuronen.com",
-        "og_image": "",
-        "og_site_name": "Shae Kuronen",
-        "og_app_id": "",
-        "og_description": "Portfolio Site | Shae Kuronen"
-      }
-    }
+    "path_to_data": [
+      "dev/data/global.json",
+      {"dev/data/meta.json": "about"}
+    ]
   },
 
   "flexbox": {
     "category": "lab",
     "path_to_layout": "dev/layouts/experiment.ejs",
-    "meta": {
-      "title": "Flexible Box Model",
-      "description": "Future Proof Flexbox",
-      "keywords": "",
-      "facebook": {
-        "og_title": "Shae Kuronen",
-        "og_type": "website",
-        "og_url": "http://shaekuronen.com",
-        "og_image": "",
-        "og_site_name": "Shae Kuronen",
-        "og_app_id": "",
-        "og_description": "Portfolio Site | Shae Kuronen"
-      }
-    }
+    "path_to_data": [
+      "dev/data/global.json",
+      {"dev/data/meta.json": "work"}
+    ]
   },
 
   "coca_cola_journey": {
     "category": "project",
     "path_to_layout": "dev/layouts/project.ejs",
-    "meta": {
-      "title": "Coca-Cola Journey HTML Email",
-      "description": "Some description here",
-      "keywords": "",
-      "facebook": {
-        "og_title": "Shae Kuronen",
-        "og_type": "website",
-        "og_url": "http://shaekuronen.com",
-        "og_image": "",
-        "og_site_name": "Shae Kuronen",
-        "og_app_id": "",
-        "og_description": "Portfolio Site | Shae Kuronen"
-      }
-    }
+    "path_to_data": [
+      "dev/data/global.json",
+      {"dev/data/projects.json": "coca_cola_journey"},
+      {"dev/data/meta.json": "coca_cola_journey"}
+    ]
   }
 
 }
