@@ -1,9 +1,11 @@
 {
 
   "home": {
-    "path_to_data": {
-      "dev/data/clients.json": "Dockers"
-    },
+    "path_to_data": [
+      "dev/data/clients.json",
+      "dev/data/projects.json",
+      {"dev/data/meta.json": "home"}
+    ],
     "meta": {
       "title": "Home",
       "description": "Portfolio Site | Shae Kuronen",

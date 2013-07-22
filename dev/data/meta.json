@@ -1,0 +1,48 @@
+{
+
+  "default": {
+    "title": "Default",
+    "description": "Portfolio Site | Shae Kuronen",
+    "keywords": "",
+    "facebook": {
+      "og_title": "Shae Kuronen",
+      "og_type": "website",
+      "og_url": "http://shaekuronen.com",
+      "og_image": "",
+      "og_site_name": "Shae Kuronen",
+      "og_app_id": "",
+      "og_description": "Portfolio Site | Shae Kuronen"
+    }
+  },
+
+  "home": {
+    "title": "Home",
+    "description": "Portfolio Site | Shae Kuronen",
+    "keywords": "",
+    "facebook": {
+      "og_title": "Shae Kuronen",
+      "og_type": "website",
+      "og_url": "http://shaekuronen.com",
+      "og_image": "",
+      "og_site_name": "Shae Kuronen",
+      "og_app_id": "",
+      "og_description": "Portfolio Site | Shae Kuronen"
+    }
+  },
+
+  "work": {
+    "title": "Work",
+    "description": "Portfolio Site | Shae Kuronen",
+    "keywords": "",
+    "facebook": {
+      "og_title": "Shae Kuronen",
+      "og_type": "website",
+      "og_url": "http://shaekuronen.com",
+      "og_image": "",
+      "og_site_name": "Shae Kuronen",
+      "og_app_id": "",
+      "og_description": "Portfolio Site | Shae Kuronen"
+    }
+  }
+
+}
