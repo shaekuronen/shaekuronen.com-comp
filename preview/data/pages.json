@@ -1,6 +1,9 @@
 {
 
   "home": {
+    "path_to_data": {
+      "dev/data/clients.json": "Dockers"
+    },
     "meta": {
       "title": "Home",
       "description": "Portfolio Site | Shae Kuronen",
@@ -19,6 +22,10 @@
 
   "work": {
     "path_to_layout": "dev/layouts/work.ejs",
+    "path_to_data": [
+      "dev/data/clients.json",
+      "dev/data/projects.json"
+    ],
     "meta": {
       "title": "Work",
       "description": "Portfolio Site | Shae Kuronen",
@@ -111,7 +118,7 @@
     "category": "project",
     "path_to_layout": "dev/layouts/project.ejs",
     "meta": {
-      "title": "Coca-Cola Journey Responsive Design",
+      "title": "Coca-Cola Journey HTML Email",
       "description": "Some description here",
       "keywords": "",
       "facebook": {
