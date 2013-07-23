@@ -71,8 +71,7 @@ module.exports = function(grunt) {
           index_page: 'home',
           parent_dirs: false,
           underscores_to_dashes: true,
-          file_extension: '.html',
-          path_separator: '/'
+          file_extension: '.html'
         }
       },
       optimize: {
