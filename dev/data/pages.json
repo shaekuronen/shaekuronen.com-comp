@@ -47,7 +47,7 @@
     "path_to_layout": "dev/layouts/experiment.ejs",
     "path_to_data": [
       "dev/data/global.json",
-      {"dev/data/meta.json": "work"}
+      {"dev/data/meta.json": "flexbox"}
     ]
   },
 
