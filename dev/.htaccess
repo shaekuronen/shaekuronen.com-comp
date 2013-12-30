@@ -42,6 +42,19 @@
 # AuthGroupFile /dev/null
 # require valid-user
 
+# ##############################################################################
+# # END DEVELOPMENT CONFIG (remove from live site!!!)                          #
+# ##############################################################################
+
+# ----------------------------------------------------------------------
+# Redirect all requests to root dir index.html
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+  RewriteRule ^/(.*)/index.html$ /index.html
+  RewriteRule ^/(.*)/$ /index.html
+</IfModule>
+
 # ----------------------------------------------------------------------
 # Prevent access to htaccess & htpasswd file containing login info
 # ----------------------------------------------------------------------
