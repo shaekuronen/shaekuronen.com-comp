@@ -25,7 +25,8 @@
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-jshint": "~0.7.1",
     "grunt-modernizr": "~0.4.1",
-    "grunt-autoprefixer": "~0.4.1"
+    "grunt-autoprefixer": "~0.4.1",
+    "grunt-connect-rewrite": "~0.2.0"
   },
   "dependencies": {
     "time-grunt": "~0.2.0"
