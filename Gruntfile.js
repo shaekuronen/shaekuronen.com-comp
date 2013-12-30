@@ -4,6 +4,8 @@ module.exports = function(grunt) {
 
   require('time-grunt')(grunt);
 
+  var rewriteRulesSnippet = require('grunt-connect-rewrite/lib/utils').rewriteRequest;
+
   // Project configuration.
   grunt.initConfig({
 
@@ -11,17 +13,34 @@ module.exports = function(grunt) {
 
     // start a node server
     connect: {
+      rules: [
+          // rewrite all pages to root index.html
+          {from: '^/(.*)/index.html$', to: '/index.html'},
+          {from: '^/(.*)/$', to: '/index.html'}
+      ],
       preview: {
         options: {
           port: 9000,
-          base: 'preview'
+          base: 'preview',
+          middleware: function (connect, options) {
+            return [
+              rewriteRulesSnippet,
+              connect.static(require('path').resolve(options.base))
+            ];
+          }
         }
       },
       optimize: {
         options: {
           port: 9001,
           keepalive: true,
-          base: 'production'
+          base: 'production',
+          middleware: function (connect, options) {
+            return [
+              rewriteRulesSnippet,
+              connect.static(require('path').resolve(options.base))
+            ];
+          }
         }
       }
     },
@@ -273,6 +292,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-ejs-static');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-connect-rewrite');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // execute the task
@@ -283,6 +303,7 @@ module.exports = function(grunt) {
       'copy:preview',
       'autoprefixer:preview',
       'ejs_static:preview',
+      'configureRewriteRules',
       'connect:preview',
       'watch'
     );
@@ -321,13 +342,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-ejs-static');
     grunt.loadNpmTasks("grunt-modernizr");
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-connect-rewrite');
 
     // execute the task
     grunt.task.run(
@@ -345,6 +367,7 @@ module.exports = function(grunt) {
       'ejs_static:optimize',
       'clean:post_optimize',
       'imagemin',
+      'configureRewriteRules',
       'connect:optimize'
     );
 
