@@ -1,2 +1,0 @@
-shaekuronen.com
-===============
