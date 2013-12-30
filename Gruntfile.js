@@ -1,75 +1,56 @@
 
-// livereload
-'use strict';
-var path = require('path');
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
-
-var folderMount = function folderMount(connect, point) {
-  return connect.static(path.resolve(point));
-};
-// end livereload
-
-
-
 /*global module:false*/
 module.exports = function(grunt) {
+
+  require('time-grunt')(grunt);
 
   // Project configuration.
   grunt.initConfig({
 
-    pkg: grunt.file.readJSON('package.json')
-
-    ,livereload: {
-      port: 35729 
-    }
+    pkg: grunt.file.readJSON('package.json'),
 
     // start a node server
-    ,connect: {
+    connect: {
       preview: {
         options: {
-          port: 9000
-          ,keepalive: true
-          ,base: './preview'
-          ,middleware: function(connect, options) {
-            return [lrSnippet, folderMount(connect, options.base)]
-          }
+          port: 9000,
+          base: 'preview'
         }
-      }
-      ,optimize: {
+      },
+      optimize: {
         options: {
-          port: 9001
-          ,keepalive: true
-          ,base: './production'
+          port: 9001,
+          keepalive: true,
+          base: 'production'
         }
       }
-    }
+    },
 
-    // delete everything from preview or production directories before optimize task
-    ,clean: {
+    // delete everything from preview or production directories before preview or optimize task
+    clean: {
       preview: {
         src: 'preview/'
-      }
-      ,optimize: {
+      },
+      pre_optimize: {
         src: 'production/'
-      }
-      ,post_optimize: {
+      },
+      post_optimize: {
         src: [
-          'production/layouts/', 
           'production/templates/',
           'production/scripts.ejs',
           'production/head.ejs'
         ]
       }
-    }
+    },
 
-    ,ejs_static: {
+    ejs_static: {
       preview: {
         options: {
           dest: 'preview',
           path_to_data: 'dev/data/pages.json',
-          path_to_layouts: 'dev/pages',
+          path_to_layouts: 'dev/templates/layouts',
           index_page: 'home',
-          parent_dirs: false,
+          parent_dirs: true,
           underscores_to_dashes: true,
           file_extension: '.html'
         }
@@ -78,188 +59,296 @@ module.exports = function(grunt) {
         options: {
           dest: 'production',
           path_to_data: 'dev/data/pages.json',
-          path_to_global_data: 'dev/data/global.json',
-          path_to_layouts: 'dev/pages',
+          path_to_layouts: 'production/templates/layouts',
           index_page: 'home',
-          parent_dirs: false,
+          parent_dirs: true,
           underscores_to_dashes: true,
-          file_extension: '.html',
-          global_data: '_global'
+          file_extension: '.html'
         }
       }
-    }
+    },
 
-    // get the scripts inside scripts.ejs and head.ejs build:js blocks
-    ,'useminPrepare': {
-      html: [
-        'production/head.ejs'
-        ,'production/scripts.ejs'
-      ]     
-    }
-
-    // update the scripts links to point to the concatenated and minified js/main.js
-    ,usemin: {
-      html: [
-        'production/templates/global/head.ejs'
-        ,'production/templates/global/scripts.ejs'
-      ]
-    }
-
-    ,rev: {
-      files: {
-        src: [
-          'production/js/main.js'
-          ,'production/css/main.css'
-        ]
-      }
-    }
-
-    ,copy: {
+    copy: {
       preview: {
         files: [
-          // {expand: true, cwd: 'dev/', src: ['img/**'], dest: 'preview/'}
-          // ,{expand: true, cwd: 'dev/', src: ['css/**'], dest: 'preview/'}
-          // ,{expand: true, cwd: 'dev/', src: ['js/**'], dest: 'preview/'}
-          // ,{expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'preview/'}
-          {expand: true, cwd: 'dev/', src: ['**/*'], dest: 'preview/'}
+          {expand: true, cwd: 'dev/', src: ['img/**'], dest: 'preview/'},
+          {expand: true, cwd: 'dev/', src: ['css/**'], dest: 'preview/'},
+          {expand: true, cwd: 'dev/', src: ['js/**'], dest: 'preview/'},
+          {expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'preview/'}
         ]
-      }
-      ,optimize: {
+      },
+      optimize: {
         files: [
-          {expand: true, flatten: true, cwd: 'dev/', src: ['templates/global/head.ejs'], dest: 'production/', filter: 'isFile'}
-          ,{expand: true, flatten: true, cwd: 'dev/', src: ['templates/global/scripts.ejs'], dest: 'production/', filter: 'isFile'}
-          ,{expand: true, flatten: true, cwd: 'dev/', src: ['css/fonts/**'], dest: 'production/fonts/', filter: 'isFile'}
-          // ,{expand: true, cwd: 'dev/', src: ['templates/**'], dest: 'production/'}
-          // ,{expand: true, cwd: 'dev/', src: ['js/**'], dest: 'production/'}
-          // ,{expand: true, cwd: 'dev/', src: ['css/**'], dest: 'production/'}
-          // ,{expand: true, cwd: 'dev/', src: ['img/**'], dest: 'production/'}
-          // ,{expand: true, cwd: 'dev/', src: ['.ht*'], dest: 'production/'}
-          // ,{expand: true, cwd: 'dev/', src: ['robots.txt'], dest: 'production/'}
-          // ,{expand: true, cwd: 'dev/', src: ['js/vendor/modernizr.custom.js'], dest: 'production/'}
-          ,{expand: true, cwd: 'dev/', src: ['**/*'], dest: 'production/'}
-          
+          {expand: true, cwd: 'dev/', src: ['**'], dest: 'production/'},
+          {expand: true, flatten: true, cwd: 'dev/', src: ['css/fonts/**'], dest: 'production/fonts/', filter: 'isFile'}
         ]
       }
-    }
+    },
 
-    // start preview server as a background process
-    // superuser.com/questions/178587/how-do-i-detach-a-process-from-terminal-entirely
-    // askubuntu.com/questions/157779/how-to-determine-whether-a-process-is-running-or-not-and-make-use-f-it-to-make-a
-    // https://gist.github.com/m-allanson/4637797
-    // github.com/rma4ok/grunt-bg-shell
-    ,exec: {
-      start_server: {
-        command: 'grunt connect:preview &'
+    // get the scripts inside scripts.ejs and head.ejs build:js blocks
+    'useminPrepare': {
+      html: [
+        'production/templates/components/global/head.ejs',
+        'production/templates/components/global/scripts.ejs'
+      ],
+      options: {
+        dest: 'production',
+        root: 'production'
       }
-    }   
+    },
 
-    ,regarde: {
-      layouts: {
-        files: [
-          'dev/layouts/*.ejs'
-          ,'dev/layouts/**/*.ejs'
-        ]
-        ,tasks: ['template', 'livereload']
+    // update the scripts links to point to the concatenated and minified js/main.js
+    usemin: {
+      html: [
+        'production/templates/components/global/head.ejs',
+        'production/templates/components/global/scripts.ejs'
+      ],
+      options: {
+        // this is necessary so that usemin can find the revved css and js files
+        assetsDirs: ['production']
       }
-      ,css: {
-        files: [
-          'dev/css/*.css'
-          ,'dev/css/**/*.css'
-        ]
-        ,tasks: ['refresh_css', 'livereload']
-      }
-      ,js: {
-        files: [
-          'dev/js/*.js'
-          ,'dev/js/**/*.js'
-        ]
-        ,tasks: ['refresh_js', 'livereload']
-      }
-      ,img: {
-        files: [
-          'dev/img/'
-        ]
-        ,tasks: ['refresh_img', 'livereload']
-      }
-    }
+    },
 
-    ,imagemin: {
-      production: {
-        options: {      
-          optimizationLevel: 1
-        }
-        ,files: [ {
-          expand: true
-          ,cwd: 'production/img/'
-          ,src:'**/*'
-          ,dest: 'production/img/' 
-        } ]
-      }      
-    }
+    filerev: {
+      files: {
+        src: [
+          'production/js/main.js',
+          'production/js/vendor/modernizr_custom.js',
+          'production/css/main.css'
+        ]
+      }
+    },
 
-    // gzip assets 1-to-1 for production
-    ,compress: {
-      main: {
+    // watch: {
+    //   preview: {
+    //     files: 'dev/**',
+    //     tasks: ['refresh_preview'],
+    //     options: {
+    //       debounceDelay: 250,
+    //       livereload: true,
+    //       spawn: false
+    //     },
+    //   },
+    // },
+
+    watch: {
+      css: {
+        files: 'dev/css/**',
+        tasks: ['refresh_css'],
         options: {
-          mode: 'gzip'
-        }
-        ,files: [ {
-          expand: true 
-          ,cwd: 'production/' 
-          ,src: '**/*' 
-          ,dest: 'production/'
-        } ]
+          debounceDelay: 250,
+          livereload: true,
+          spawn: false
+        },
+      },
+      js: {
+        files: 'dev/js/**',
+        tasks: ['refresh_js'],
+        options: {
+          debounceDelay: 250,
+          livereload: true,
+          spawn: false
+        },
+      },
+      // img: {
+      //   files: 'dev/img/**',
+      //   tasks: ['refresh_preview'],
+      //   options: {
+      //     debounceDelay: 250,
+      //     livereload: true,
+      //     spawn: false
+      //   },
+      // },
+      // templates: {
+      //   files: 'dev/templates/**',
+      //   tasks: ['refresh_preview'],
+      //   options: {
+      //     debounceDelay: 250,
+      //     livereload: true,
+      //     spawn: false
+      //   },
+      // },
+      // data: {
+      //   files: 'dev/data/**',
+      //   tasks: ['refresh_preview'],
+      //   options: {
+      //     debounceDelay: 250,
+      //     livereload: true,
+      //     spawn: false
+      //   },
+      // },
+      // this matches any files in root dir like .htaccess, robots.txt, etc
+      everything_else: {
+        files: 'dev/!(css|js)/**',
+        tasks: ['refresh_preview'],
+        options: {
+          debounceDelay: 250,
+          livereload: true,
+          spawn: false
+        },
+      },
+    },
+
+    jshint: {
+      all: [
+        'Gruntfile.js',
+        'dev/js/site/**/*.js'
+      ],
+      options: {
+        jshintrc: '.jshintrc',
+      }
+    },
+
+    imagemin: {
+      production: {
+        files: [{
+          expand: true,
+          cwd: 'production/img/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'production/img/'
+        }]
+      }
+    },
+
+    modernizr: {
+      "devFile" : "remote",
+      "outputFile" : "dev/js/vendor/modernizr_custom.js",
+      // add feature tests here
+      "extra" : {
+        "shiv" : true,
+        "load" : true,
+        "cssclasses" : true,
+        "cssanimations": true
+      },
+      "uglify" : true,
+      "parseFiles" : false
+    },
+
+    autoprefixer: {
+      options: {
+        // task-specific options go here
+      },
+      preview: {
+        expand: true,
+        flatten: false,
+        // setting only source overwrites source files
+        src: 'preview/css/**/*.css'
+      },
+      optimize: {
+        options: {
+          // Target-specific options go here.
+        },
+        // setting only source overwrites source files
+        src: 'production/css/main.*.css'
       }
     }
 
   });
 
-  // these plugins provide necessary tasks
-  grunt.loadNpmTasks('grunt-usemin');
-  grunt.loadNpmTasks('grunt-rev');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-reload');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-exec');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-livereload');
-  grunt.loadNpmTasks('grunt-regarde');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-ejs-static');
+  // discussion @ https://github.com/gruntjs/grunt/issues/975
+  //
+  // JSHINT
+  grunt.registerTask('jshint', [], function () {
 
+    // load plugins for jshint task
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+
+    // execute the task
+    grunt.task.run(
+      'jshint'
+    );
+
+  });
+  // END JSHINT
+
+  // DEVELOPMENT
+  //
   // preview the site during development
-  grunt.registerTask('preview', [
-    'clean:preview', 
-    'copy:preview', 
-    'ejs_static:preview', 
-    'livereload-start', 
-    'exec:start_server', 
-    'regarde'
-  ]);
+  grunt.registerTask('preview', [], function () {
+
+    // load plugins for preview task
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks("grunt-modernizr");
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-ejs-static');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+
+    // execute the task
+    grunt.task.run(
+      'jshint',
+      'clean:preview',
+      'modernizr',
+      'copy:preview',
+      'autoprefixer:preview',
+      'ejs_static:preview',
+      'connect:preview',
+      'watch'
+    );
+
+  });
   // end preview the site during development
 
-  // optimize the site for deployment
-  grunt.registerTask('optimize', [
-    'clean:optimize', 
-    'copy:optimize',  
-    'useminPrepare', 
-    'concat', 
-    'cssmin', 
-    'uglify', 
-    'rev', 
-    'usemin', 
-    'ejs_static:optimize', 
-    'imagemin', 
-    'clean:post_optimize', 
-    'connect:optimize'
+  // refresh preview site when files change
+  // necessary tasks are still loaded because of running grunt process (watch), so no need to load plugins
+  grunt.registerTask('refresh_css', [
+    'copy:preview',
+    'ejs_static:preview'
   ]);
-  // end optimize the site for deployment
+  grunt.registerTask('refresh_js', [
+    'jshint',
+    'copy:preview',
+    'ejs_static:preview'
+  ]);
+  grunt.registerTask('refresh_preview', [
+    'copy:preview',
+    'ejs_static:preview'
+  ]);
+  // end refresh preview site when files change
+  //
+  // END DEVELOPEMENT
 
-  // TEST
-  grunt.registerTask('test', [ 'clean:preview', 'copy:preview', 'ejs_static:preview' ]);
-  // END TEST
+  // OPTIMIZE
+  //
+  // optimize the site for deployment
+  grunt.registerTask('optimize', [], function () {
+
+    // load plugins for optimize task
+    grunt.loadNpmTasks('grunt-usemin');
+    grunt.loadNpmTasks('grunt-filerev');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-ejs-static');
+    grunt.loadNpmTasks("grunt-modernizr");
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+
+    // execute the task
+    grunt.task.run(
+      'jshint',
+      'clean:pre_optimize',
+      'modernizr',
+      'copy:optimize',
+      'useminPrepare',
+      'concat',
+      'cssmin',
+      'uglify',
+      'filerev',
+      'usemin',
+      'autoprefixer:optimize',
+      'ejs_static:optimize',
+      'clean:post_optimize',
+      'imagemin',
+      'connect:optimize'
+    );
+
+  });
+  // END OPTIMIZE
 
 };

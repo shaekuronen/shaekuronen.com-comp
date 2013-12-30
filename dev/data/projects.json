@@ -1,19 +1,13 @@
 {
 
-  "coca_cola_journey": {
-    "title": "Coca-Cola Journey HTML Email",
-    "tags": [
-      "HTML Email",
-      "ExactTarget"
-    ]
+  "project1": {
+    "heading": "This is the #1 project",
+    "intro_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, dolorem, aperiam necessitatibus itaque ipsam enim dignissimos veniam maiores vitae optio porro commodi quae assumenda inventore quis sit doloribus. Porro, culpa."
   },
 
-  "coca_cola_unbottled_blog": {
-    "title": "Responsive Design of Coca-Cola Unbottled",
-    "tags": [
-      "responsive design",
-      "WordPress"
-    ]
+  "project2": {
+    "heading": "This is the #2 project",
+    "intro_text": "Provident, possimus, corporis perspiciatis illum assumenda expedita tenetur dicta unde nisi doloremque rerum voluptas eveniet minima consequatur cum laudantium odio temporibus necessitatibus!"
   }
 
 }

@@ -1,47 +1,33 @@
 {
-  "name": "shaekuronen.com",
+  "name": "shaekuronencom",
+  "version": "0.0.0",
   "description": "Portfolio Site",
-  "version": "0.1.0",
-  "created": "Fri Jul 05 2013 17:03:59 GMT-0700 (PDT)",
-  "guid": "53e1a774-d06b-4969-a460-757be3ebe57e",
-  "homepage": "https://github.com/shaekuronen/shaekuronen.com",
+  "homepage": "https://github.com/shaekuronen/shaekuronencom.git",
+  "bugs": "https://github.com/shaekuronen/shaekuronencom/issues",
   "author": {
     "name": "Shae Kuronen",
     "email": "shae.kuronen@gmail.com",
     "url": "http://shaekuronen.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/shaekuronen/shaekuronen.com"
-  },
-  "bugs": {
-    "url": "https://github.com/shaekuronen/shaekuronen.com/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ],
-  "main": "Gruntfile.js",
-  "engines": {
-    "node": ">= 0.8.0"
-  },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-usemin": "~0.1.7",
-    "grunt-contrib-concat": "~0.1.3",
-    "grunt-contrib-cssmin": "~0.4.0",
-    "grunt-contrib-uglify": "~0.1.2",
-    "grunt-exec": "~0.4.0",
-    "grunt-contrib-connect": "~0.2.0",
+    "grunt-usemin": "~2.0.2",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-livereload": "~0.1.2",
-    "grunt-regarde": "~0.1.1",
-    "grunt-reload": "~0.2.0",
-    "grunt-rev": "~0.1.0",
-    "grunt-contrib-imagemin": "~0.1.4",
+    "grunt-filerev": "~0.1.1",
+    "grunt-contrib-imagemin": "~0.3.0",
     "ejs": "~0.8.4",
-    "grunt-ejs-static": "~0.3.01"
+    "grunt-ejs-static": "~0.3.7",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.7.1",
+    "grunt-modernizr": "~0.4.1",
+    "grunt-autoprefixer": "~0.4.1"
+  },
+  "dependencies": {
+    "time-grunt": "~0.2.0"
   }
 }

@@ -1,64 +1,40 @@
 {
 
   "home": {
-    "path_to_layout": "dev/layouts/home.ejs",
+    "layout": "home",
     "path_to_data": [
       "dev/data/global.json",
-      "dev/data/clients.json",
-      "dev/data/projects.json",
       {"dev/data/meta.json": "home"}
     ]
   },
 
-  "work": {
-    "path_to_layout": "dev/layouts/work.ejs",
-    "path_to_data": [
-      "dev/data/clients.json",
-      "dev/data/projects.json",
-      {"dev/data/meta.json": "work"}
-    ]
-  },
-
-  "clients": {
-    "path_to_layout": "dev/layouts/clients.ejs",
-    "path_to_data": [
-      "dev/data/global.json",
-      "dev/data/clients.json",
-      {"dev/data/meta.json": "clients"}
-    ]
-  },
-
-  "contact": {
-    "path_to_data": [
-      "dev/data/global.json",
-      {"dev/data/meta.json": "default"}
-    ]
-  },
-
   "about": {
+    "layout": "about",
     "path_to_data": [
       "dev/data/global.json",
       {"dev/data/meta.json": "about"}
     ]
   },
 
-  "flexbox": {
-    "category": "lab",
-    "path_to_layout": "dev/layouts/experiment.ejs",
+  "project1": {
+    "category": "work",
+    "layout": "project",
     "path_to_data": [
       "dev/data/global.json",
-      {"dev/data/meta.json": "flexbox"}
+      {"dev/data/meta.json": "project1"},
+      {"dev/data/projects.json": "project1"}
     ]
   },
 
-  "coca_cola_journey": {
-    "category": "project",
-    "path_to_layout": "dev/layouts/project.ejs",
+  "project2": {
+    "category": "work",
+    "layout": "project",
     "path_to_data": [
       "dev/data/global.json",
-      {"dev/data/projects.json": "coca_cola_journey"},
-      {"dev/data/meta.json": "coca_cola_journey"}
+      {"dev/data/meta.json": "project2"},
+      {"dev/data/projects.json": "project2"}
     ]
   }
 
 }
+

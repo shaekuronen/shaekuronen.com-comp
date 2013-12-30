@@ -1,107 +1,122 @@
 {
 
   "default": {
-    "title": "Default",
-    "description": "Portfolio Site | Shae Kuronen",
+    "title": "Default Title",
+    "description": "Description goes here...",
     "keywords": "",
     "facebook": {
-      "og_title": "Shae Kuronen",
+      "og_title": "Title",
       "og_type": "website",
-      "og_url": "http://shaekuronen.com",
-      "og_image": "",
-      "og_site_name": "Shae Kuronen",
+      "og_url": "http://www.example.com",
+      "og_image": "http://www.example.com/path/to/image.jpg",
+      "og_site_name": "Example Site",
       "og_app_id": "",
-      "og_description": "Portfolio Site | Shae Kuronen"
+      "og_description": "Description goes here..."
+    },
+    "twitter": {
+      "card_type": "summary",
+      "site": "@example",
+      "creator": "@example",
+      "url": "http://www.example.com",
+      "title": "Title",
+      "description": "Description goes here...",
+      "image": "http://www.example.com/path/to/image.jpg"
     }
   },
 
   "home": {
     "title": "Home",
-    "description": "Portfolio Site | Shae Kuronen",
+    "description": "Description goes here...",
     "keywords": "",
     "facebook": {
-      "og_title": "Shae Kuronen",
+      "og_title": "Title",
       "og_type": "website",
-      "og_url": "http://shaekuronen.com",
-      "og_image": "",
-      "og_site_name": "Shae Kuronen",
+      "og_url": "http://www.example.com",
+      "og_image": "http://www.example.com/path/to/image.jpg",
+      "og_site_name": "Example Site",
       "og_app_id": "",
-      "og_description": "Portfolio Site | Shae Kuronen"
-    }
-  },
-
-  "work": {
-    "title": "Work",
-    "description": "Portfolio Site | Shae Kuronen",
-    "keywords": "",
-    "facebook": {
-      "og_title": "Shae Kuronen",
-      "og_type": "website",
-      "og_url": "http://shaekuronen.com",
-      "og_image": "",
-      "og_site_name": "Shae Kuronen",
-      "og_app_id": "",
-      "og_description": "Portfolio Site | Shae Kuronen"
+      "og_description": "Description goes here..."
+    },
+    "twitter": {
+      "card_type": "summary",
+      "site": "@example",
+      "creator": "@example",
+      "url": "http://www.example.com",
+      "title": "Title",
+      "description": "Description goes here...",
+      "image": "http://www.example.com/path/to/image.jpg"
     }
   },
 
   "about": {
     "title": "About",
-    "description": "Portfolio Site | Shae Kuronen",
+    "description": "Description goes here...",
     "keywords": "",
     "facebook": {
-      "og_title": "Shae Kuronen",
+      "og_title": "Title",
       "og_type": "website",
-      "og_url": "http://shaekuronen.com",
-      "og_image": "",
-      "og_site_name": "Shae Kuronen",
+      "og_url": "http://www.example.com",
+      "og_image": "http://www.example.com/path/to/image.jpg",
+      "og_site_name": "Example Site",
       "og_app_id": "",
-      "og_description": "Portfolio Site | Shae Kuronen"
+      "og_description": "Description goes here..."
+    },
+    "twitter": {
+      "card_type": "summary",
+      "site": "@example",
+      "creator": "@example",
+      "url": "http://www.example.com",
+      "title": "Title",
+      "description": "Description goes here...",
+      "image": "http://www.example.com/path/to/image.jpg"
     }
   },
 
-  "clients": {
-    "title": "Clients",
-    "description": "Portfolio Site | Shae Kuronen",
+  "project1": {
+    "title": "Project 1",
+    "description": "Description goes here...",
     "keywords": "",
     "facebook": {
-      "og_title": "Shae Kuronen",
+      "og_title": "Title",
       "og_type": "website",
-      "og_url": "http://shaekuronen.com",
-      "og_image": "",
-      "og_site_name": "Shae Kuronen",
+      "og_url": "http://www.example.com",
+      "og_image": "http://www.example.com/path/to/image.jpg",
+      "og_site_name": "Example Site",
       "og_app_id": "",
-      "og_description": "Portfolio Site | Shae Kuronen"
+      "og_description": "Description goes here..."
+    },
+    "twitter": {
+      "card_type": "summary",
+      "site": "@example",
+      "creator": "@example",
+      "url": "http://www.example.com",
+      "title": "Title",
+      "description": "Description goes here...",
+      "image": "http://www.example.com/path/to/image.jpg"
     }
   },
 
-  "flexbox": {
-    "title": "Flexible Box Model",
-    "description": "Future Proof Flexbox",
+  "project2": {
+    "title": "Project 2",
+    "description": "Description goes here...",
     "keywords": "",
     "facebook": {
-      "og_title": "Shae Kuronen",
+      "og_title": "Title",
       "og_type": "website",
-      "og_url": "http://shaekuronen.com",
-      "og_image": "",
-      "og_site_name": "Shae Kuronen",
+      "og_url": "http://www.example.com",
+      "og_image": "http://www.example.com/path/to/image.jpg",
+      "og_site_name": "Example Site",
       "og_app_id": "",
-      "og_description": "Portfolio Site | Shae Kuronen"
-    }
-  },
-
-  "coca_cola_journey": {
-    "title": "Coca-Cola Journey HTML Email",
-    "description": "Some description here",
-    "keywords": "",
-    "facebook": {
-      "og_title": "Shae Kuronen",
-      "og_type": "website",
-      "og_url": "http://shaekuronen.com",
-      "og_image": "",
-      "og_site_name": "Shae Kuronen",
-      "og_app_id": "",
-      "og_description": "Portfolio Site | Shae Kuronen"
+      "og_description": "Description goes here..."
+    },
+    "twitter": {
+      "card_type": "summary",
+      "site": "@example",
+      "creator": "@example",
+      "url": "http://www.example.com",
+      "title": "Title",
+      "description": "Description goes here...",
+      "image": "http://www.example.com/path/to/image.jpg"
     }
   }
 
