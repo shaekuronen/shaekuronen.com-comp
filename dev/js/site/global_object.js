@@ -1,3 +1,3 @@
 
-var go_GLOBAL = go_GLOBAL || {};
+var sk_GLOBAL = sk_GLOBAL || {};
 

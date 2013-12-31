@@ -9,5 +9,12 @@
   "undef": true,
   "boss": true,
   "eqnull": true,
-  "node": true
+  "node": true,
+  "browser": true,
+  "globals" : {
+    "History" : false,
+    "matchMedia": false,
+    "sk_GLOBAL": false,
+    "jQuery": false
+  }
 }
