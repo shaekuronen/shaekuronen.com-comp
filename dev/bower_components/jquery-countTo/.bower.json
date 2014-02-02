@@ -1,0 +1,34 @@
+{
+  "name": "jquery-countTo",
+  "homepage": "https://github.com/mhuggins/jquery-countTo",
+  "authors": [
+    "Matt Huggins <matt.huggins@gmail.com>"
+  ],
+  "description": "Jquery count plugin",
+  "main": "jquery.countTo.js",
+  "keywords": [
+    "jquery",
+    "count",
+    "countTo",
+    "counter",
+    "timer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "5bbf3e67f5",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5bbf3e67f514fb4b7468547d5f6017653b208a08"
+  },
+  "_source": "git://github.com/Atolye15-packs/jquery-countTo.git",
+  "_target": "*",
+  "_originalSource": "jquery-countTo",
+  "_direct": true
+}

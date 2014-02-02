@@ -1,0 +1,33 @@
+{
+  "name": "wow",
+  "version": "0.0.8",
+  "homepage": "https://github.com/matthieua/WOW",
+  "authors": [
+    "Matthieu Aussaguel <matthieu.aussaguel@gmail.com>"
+  ],
+  "description": "Reveal CSS animation as you scroll down a page.",
+  "main": "wow.js",
+  "keywords": [
+    "scroll",
+    "animation",
+    "reveal"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.8",
+    "commit": "3748e8e5ba95a1a207522937203f0612afd9b50e"
+  },
+  "_source": "git://github.com/matthieua/jackInTheBox.git",
+  "_target": "~0.0.8",
+  "_originalSource": "jack-in-the-box",
+  "_direct": true
+}
