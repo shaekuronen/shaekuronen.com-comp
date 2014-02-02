@@ -1,5 +1,7 @@
 (function($) {
 
+  console.log('this happened');
+
   // fire different events based on url
   History.Adapter.bind(window, 'statechange', function() {
 

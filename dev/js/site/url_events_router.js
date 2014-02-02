@@ -7,10 +7,9 @@
     var url = $.url(),
         path = url.attr('path'),
         url_segments = path.split('/'),
-        url_ready_name = '',
-        team_member;
+        url_ready_name = '';
 
-    console.log(team_member);
+    console.log('the path is ' + path);
 
 
   }());
