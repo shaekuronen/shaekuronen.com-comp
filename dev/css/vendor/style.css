@@ -115,8 +115,16 @@ object {
 	background:url(../../img/parallax-contact.jpg) 50% 0 no-repeat fixed;
 }
 
-#services {
+#services{
 	background:url(../../img/parallax-services.jpg) 50% 0 no-repeat fixed;
+}
+
+#clients {
+  background-image: url(../../img/alps.jpg);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #twitter {

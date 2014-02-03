@@ -60,6 +60,9 @@ $(window).load(function() {
 		$('#twitter').parallax("50%", 0.4);
 		$('#projectbg').parallax("50%", 0.4);
 		$('#quote').parallax("50%", 0.4);
+		console.log('parallax init happened');
+	} else {
+		console.log('parallax init DID NOT happened');
 	}
 
 	// Parallax Fix for Mobile Devices
